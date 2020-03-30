@@ -1,5 +1,3 @@
-// Update with your config settings.
-
 module.exports = {
 
   development: {
@@ -40,21 +38,21 @@ module.exports = {
   },
 
   production: {
-    client: 'postgresql',
+    client: 'pg',
     connection: {
-      host: 'ec2-23-22-156-110.compute-1.amazonaws.com',
+      host: 'ec2-23-22-156-110.compute-1.amazonaws.com:5432',
       database: 'd717a90n7raibh',
       user:     'xmszhcydqvsftf',
-      password: '7302d60196a7d91c30717db482d2cf6d16df2510a229121302960410a2ae85bc',
-      port: '5432'      
+      password: '7302d60196a7d91c30717db482d2cf6d16df2510a229121302960410a2ae85bc'      
     },
     pool: {
       min: 2,
       max: 10
     },
     migrations: {
-      tableName: 'knex_migrations'
+      directory: './src/database/migrations'
     }
   }
 
 };
+
