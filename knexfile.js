@@ -38,7 +38,7 @@ module.exports = {
   },
 
   production: {
-    client: 'pg',
+    client: 'postgresql',
     connection: {
       host: 'ec2-23-22-156-110.compute-1.amazonaws.com:5432',
       database: 'd717a90n7raibh',
@@ -50,7 +50,7 @@ module.exports = {
       max: 10
     },
     migrations: {
-      directory: './src/database/migrations'
+      tableName: 'knex_migrations'
     }
   }
 
