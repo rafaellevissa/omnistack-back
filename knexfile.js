@@ -39,14 +39,8 @@ module.exports = {
   },
 
   production: {
-    client: 'postgres://xmszhcydqvsftf:7302d60196a7d91c30717db482d2cf6d16df2510a229121302960410a2ae85bc@ec2-23-22-156-110.compute-1.amazonaws.com:5432/d717a90n7raibh',
-    connection: {
-      host: 'ec2-23-22-156-110.compute-1.amazonaws.com',
-      database: 'd717a90n7raibh',
-      user:     'xmszhcydqvsftf',
-      password: '7302d60196a7d91c30717db482d2cf6d16df2510a229121302960410a2ae85bc',
-      ssl: true    
-    },
+    client: 'postgres',
+    connection: process.env.DATABASE_URL,
     pool: {
       min: 2,
       max: 10
