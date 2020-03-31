@@ -1,3 +1,4 @@
+const pg = require('pg');
 module.exports = {
 
   development: {
@@ -50,5 +51,7 @@ module.exports = {
     }
   }
 
-};
+},
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0,
+pg.defaults.ssl = true;
 
